@@ -1,5 +1,3 @@
-import Phaser from "phaser";
-
 import TextureKeys from "../consts/TextureKeys";
 import AnimationKeys from "../consts/AnimationKeys";
 
@@ -31,6 +29,15 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
     body.setOffset(this.mouse.width * -0.5, -this.mouse.height);
 
     this.cursors = scene.input.keyboard.createCursorKeys();
+  }
+
+  kill() {
+    this.mouse.play(AnimationKeys.RocketMouseDead);
+
+    const body = this.body as Phaser.Physics.Arcade.Body;
+    body.setAccelerationY(0);
+    body.setVelocity(1000, 0);
+    this.enableJetpack(false);
   }
 
   enableJetpack(enabled: boolean) {
