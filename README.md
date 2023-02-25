@@ -6,6 +6,6 @@ Game made with Phaser 3, TypeScript and Vite!
 
 You can play it here: https://kamilpalka.github.io/Rat-Runner/
 
-controls:
+controls:  
 SPACE to fly  
 SPACE to restart game after Game Over
