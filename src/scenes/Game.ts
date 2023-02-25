@@ -248,10 +248,10 @@ export default class Game extends Phaser.Scene {
   }
 
   private handleCollectCoin(
-    //obj1: Phaser.GameObjects.GameObject,
+    obj1: Phaser.GameObjects.GameObject,
     obj2: Phaser.GameObjects.GameObject
   ) {
-    // const laser = obj1 as LaserObstacle
+    const laser = obj1 as LaserObstacle;
     const coin = obj2 as Phaser.Physics.Arcade.Sprite;
     this.coins.killAndHide(coin);
     coin.body.enable = false;
@@ -261,10 +261,10 @@ export default class Game extends Phaser.Scene {
   }
 
   private handleOverlapLaser(
-    //obj1: Phaser.GameObjects.GameObject,
+    obj1: Phaser.GameObjects.GameObject,
     obj2: Phaser.GameObjects.GameObject
   ) {
-    // const laser = obj1 as LaserObstacle
+    const laser = obj1 as LaserObstacle;
     const mouse = obj2 as RocketMouse;
     mouse.kill();
   }
