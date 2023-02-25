@@ -248,7 +248,7 @@ export default class Game extends Phaser.Scene {
   }
 
   private handleCollectCoin(
-    obj1: Phaser.GameObjects.GameObject,
+    //obj1: Phaser.GameObjects.GameObject,
     obj2: Phaser.GameObjects.GameObject
   ) {
     // const laser = obj1 as LaserObstacle
@@ -261,7 +261,7 @@ export default class Game extends Phaser.Scene {
   }
 
   private handleOverlapLaser(
-    obj1: Phaser.GameObjects.GameObject,
+    //obj1: Phaser.GameObjects.GameObject,
     obj2: Phaser.GameObjects.GameObject
   ) {
     // const laser = obj1 as LaserObstacle
@@ -302,7 +302,7 @@ export default class Game extends Phaser.Scene {
     }
   }
 
-  update(t: number, dt: number): void {
+  update(): void {
     this.wrapMouseHole();
     this.wrapWindows();
     this.wrapBookcases();
