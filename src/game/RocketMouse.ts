@@ -132,9 +132,9 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
       ],
     });
 
-    this.mouse.anims.create({
+    this.flames.anims.create({
       key: AnimationKeys.RocketFlamesOn,
-      frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse, {
+      frames: this.flames.anims.generateFrameNames(TextureKeys.RocketMouse, {
         start: 1,
         end: 2,
         prefix: "flame",
